@@ -1,9 +1,0 @@
-function texstring=polytex(poly,var,iseqn)
-
-if nargin==2
-  iseqn=0;
-end
-
-
-
-  
