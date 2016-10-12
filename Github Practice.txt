@@ -4,4 +4,6 @@ The backhoe named "Scoop" was happy to help with digging a hole to make a fence.
 
 After the task, they took a break.
 
-Someone said "What a beautiful spring day it is!".
+Scoop said "What a beautiful spring day it is!"
+
+Bob said the second thing!
