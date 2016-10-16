@@ -301,30 +301,26 @@ if strcmp(mode,'make')
   numbeamgauss=numbeamgauss+3; %Need more gauss points for the mass
                                %matrix. 
   [bgpts,bgpw]=gauss(numbeamgauss);
-  mb1=zeros(6,6); %initialize empty mass matrix
+  mb1=zeros(4,4); %initialize empty mass matrix
   % Local Bending in x-y plane
   for i=1:numbeamgauss
     beamsfs=[polyval(bn1,bgpts(i));
              polyval(bn2,bgpts(i))*Jac;
              polyval(bn3,bgpts(i));
-             polyval(bn4,bgpts(i))*Jac;
-             polyval(bn5,bgpts(i));
-             polyval(bn6,bgpts(i))*Jac];
-    A=polyval(rn1*A1+rn2*A2+rn3*A3,bgpts(i));
+             polyval(bn4,bgpts(i))*Jac];
+    A=polyval(rn1*A1+rn2*A2,bgpts(i));
     mb1=mb1+bgpw(i)*beamsfs*beamsfs'*rho*A*Jac;%pause, and reflect
                                                %(OK, this was for debugging)
   end
   
   % Local Bending in x-z plane
-  mb2=zeros(6,6);
+  mb2=zeros(4,4);
   for i=1:numbeamgauss
     beamsfs=[polyval(bn1,bgpts(i));
              -polyval(bn2,bgpts(i))*Jac;
              polyval(bn3,bgpts(i));
-             -polyval(bn4,bgpts(i))*Jac;
-             polyval(bn5,bgpts(i));
-             -polyval(bn6,bgpts(i))*Jac];
-    A=polyval(rn1*A1+rn2*A2+rn3*A3,bgpts(i));
+             -polyval(bn4,bgpts(i))*Jac];
+    A=polyval(rn1*A1+rn2*A2,bgpts(i));
     mb2=mb2+bgpw(i)*beamsfs*beamsfs'*rho*A*Jac;
   end
   
@@ -332,14 +328,13 @@ if strcmp(mode,'make')
   numrodgauss=numrodgauss+1; %Need more gauss points for the mass
                              %matrix. 
   [rgpts,rgpw]=gauss(numrodgauss);
-  mrod=zeros(3,3); %initialize empty mass matrix
-  mtor=zeros(3,3);
+  mrod=zeros(2,2); %initialize empty mass matrix
+  mtor=zeros(2,2);
   for i=1:numrodgauss
     rodsfs=[polyval(rn1,rgpts(i));
-            polyval(rn2,rgpts(i));
-            polyval(rn3,rgpts(i))];
-    J=polyval(rn1*(Iyy1+Izz1)+rn2*(Iyy2+Izz2)+rn3*(Iyy3+Izz3),rgpts(i));
-    A=polyval(rn1*A1+rn2*A2+rn3*A3,rgpts(i));
+            polyval(rn2,rgpts(i))];
+    J=polyval(rn1*(Iyy1+Izz1)+rn2*(Iyy2+Izz2),rgpts(i));
+    A=polyval(rn1*A1+rn2*A2,rgpts(i));
     mrod=mrod+rgpw(i)*rodsfs*rodsfs'*A*rho*Jac;
     mtor=mtor+rgpw(i)*rodsfs*rodsfs'*J*rho*Jac;
   end
@@ -347,19 +342,19 @@ if strcmp(mode,'make')
   % Assembling each stiffness matrix into the complete elemental 
   % stiffness matrix. We're just telling the sub-elements to be put
   % into the correct spots for the total element. 
-  k=zeros(18,18);
-  k([2 6 8 12 14 18],[2 6 8 12 14 18])=kb1;
-  k([3 5 9 11 15 17],[3 5 9 11 15 17])=kb2;
-  k([1 7 13],[1 7 13])=krod;
-  k([4 10 16],[4 10 16])=ktor;
+  k=zeros(12,12);
+  k([2 6 8 12],[2 6 8 12])=kb1;
+  k([3 5 9 11],[3 5 9 11])=kb2;
+  k([1 7],[1 7])=krod;
+  k([4 10],[4 10])=ktor;
   
   % Assembling each mass matrix into the complete elemental 
   % mass matrix
-  m=zeros(18,18);
-  m([2 6 8 12 14 18],[2 6 8 12 14 18])=mb1;
-  m([3 5 9 11 15 17],[3 5 9 11 15 17])=mb2;
-  m([1 7 13],[1 7 13])=mrod;
-  m([4 10 16],[4 10 16])=mtor;
+  m=zeros(12,12);
+  m([2 6 8 12],[2 6 8 12])=mb1;
+  m([3 5 9 11],[3 5 9 11])=mb2;
+  m([1 7],[1 7])=mrod;
+  m([4 10],[4 10])=mtor;
   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
@@ -369,7 +364,7 @@ if strcmp(mode,'make')
 
   R1=([x2 y2 z2]-[x1 y1 z1]);% Vector along element
   lam1=R1/norm(R1);% Unit direction
-  R2=([x4 y4 z4]-[x1 y1 z1]);% Unit direction to point
+  R2=([x3 y3 z3]-[x1 y1 z1]);% Unit direction to point
   R2perp=R2-dot(R2,lam1)*lam1;% Part of R2 perpendicular to lam1
   udirec=0;
   while norm(R2perp)<10*eps% If R2perp is too small, (point in line
@@ -390,13 +385,11 @@ if strcmp(mode,'make')
   lam2=R2perp/norm(R2perp);
   lam3=cross(lam1,lam2);
   lamloc=[lam1;lam2;lam3];
-  lam=sparse(18,18);
+  lam=sparse(12,12);
   lam(1:3,1:3)=lamloc;
   lam(4:6,4:6)=lamloc;
   lam(7:9,7:9)=lamloc;
   lam(10:12,10:12)=lamloc;
-  lam(13:15,13:15)=lamloc;
-  lam(16:18,16:18)=lamloc;
   
 % $$$     lam=[lamloc z z z z z;
 % $$$          z lamloc z z z z;
@@ -417,8 +410,8 @@ if strcmp(mode,'make')
   %
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-  bn1=bnodes(1);bn2=bnodes(2);bn3=bnodes(3);
-  indices=[bn1*6+(-5:0) bn2*6+(-5:0) bn3*6+(-5:0)] ;
+  bn1=bnodes(1);bn2=bnodes(2);
+  indices=[bn1*6+(-5:0) bn2*6+(-5:0)] ;
 
 
   K(indices,indices)=K(indices,indices)+kg;
@@ -429,8 +422,7 @@ if strcmp(mode,'make')
   % appropriate. Just add the pair of node numbers to the lines
   % array and that line will always be drawn.
   numlines=size(lines,1);
-  lines(numlines+1,:)=[bn1 bn3];
-  lines(numlines+2,:)=[bn3 bn2];
+  lines(numlines+1,:)=[bn1 bn2];
 
   
   
