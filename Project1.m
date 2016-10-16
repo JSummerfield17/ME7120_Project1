@@ -3,19 +3,18 @@ function out=Project1(mode,b,c,d,e)
 % BEAM3 does as listed below. It is an Euler-Bernoulli
 % beam/rod/torsion model. 
 % Beam properties (bprops) are in the order
-% bprops=[E G rho A1 A2 A3 J1 J2 J3 Ixx1 Ixx2 Ixx3 Iyy1 Iyy2 Iyy3]
-% Third node is in the middle.
+% bprops=[E G rho A1 A2 J1 J2 Ixx1 Ixx2 Iyy1 Iyy2]
 % Fourth "node" defines the beam y plane and is actually from the
 % points array.
 %%
 % Defining beam element properties in wfem input file:
 % element properties
-%   E G rho A1 A2 A3 J1 J2 J3 Izz1 Izz2 Izz3 Iyy1 Iyy2 Iyy3 
+%   E G rho A1 A2 J1 J2 Izz1 Izz2 Iyy1 Iyy2
 % Torsional rigidity, $J$, must be less than or equal
 % to $Iyy+Izz$ at any given cross section.  
 %
-% Defining beam3 element in wfem input file:
-%   node1 node2 node3 pointnumber materialnumber 
+% Defining beam2 element in wfem input file (Project1_Prompt):
+%   node1 node2 pointnumber materialnumber 
 
 %
 % See wfem.m for more explanation.
@@ -58,7 +57,7 @@ global surfs
 out=0;
 if strcmp(mode,'numofnodes')
     % This allows a code to find out how many nodes this element has
-    out=3;
+    out=2;
 end
 if strcmp(mode,'generate')
   elnum=c;%When this mode is called, the element number is the 3rd
@@ -66,24 +65,17 @@ if strcmp(mode,'generate')
   
           %The second argument (b) is the element
           %definition. For this element b is
-          %node1 node2 node3 point(for rotation) and material#
+          %node1 node2 point(for rotation) and material#
   
           %There have to be 5 numbers for this element's
           %definition (above)
-  if length(b)==5
-      element(elnum).nodes=b(1:3);
-      %If the user puts the middle node in the wrong place, tell them.
-      if norm((nodes(b(1),:)+nodes(b(2),:))/2-nodes(b(3),:))/ ...
-              norm(nodes(b(1),:)-nodes(b(2),:))>.001
-          disp(['WARNING: Node ' num2str(b(3)) ...
-                ' is not in the middle of element ' ...
-                num2str(elnum) ' on line ' num2str(curlineno) '.'])
-      end
-      element(elnum).properties=b(5);
-      element(elnum).point=b(4);
+  if length(b)==4
+      element(elnum).nodes=b(1:2);
+      element(elnum).properties=b(4);
+      element(elnum).point=b(3);
   else 
 	  b
-      %There have to be five numbers on a line defining the
+      %There have to be four numbers on a line defining the
       %element. 
       warndlg(['Element ' num2str(elnum) ' on line ' ...
                num2str(element(elnum).lineno) ' entered incorrectly.'], ...
