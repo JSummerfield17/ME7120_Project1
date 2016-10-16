@@ -193,15 +193,14 @@ if strcmp(mode,'make')
   
   % Shape functions in matrix polynomial form (polyval style) for 
   % torsion/rod
-  rn1=[0.5 -.5 0];
-  rn1d=[1 -0.5];
-  rn2=[.5 .5 0];
-  rn2d=[1 0.5];
-  rn3=[-1 0 1];
-  rn3d=[-2 0];
-  numbeamgauss=5; % Number of Gauss points for integration of beam element
+  rn1=[0.5 -.5];
+  rn1d=[0.5];
+  rn2=[.5 .5];
+  rn2d=[0.5];
+  
+  numbeamgauss=3; % Number of Gauss points for integration of beam element
   [bgpts,bgpw]=gauss(numbeamgauss);
-  kb1=zeros(6,6);% For this beam, 3 nodes, 2DOF each, is a 6 by 6
+  kb1=zeros(4,4);% For this beam, 2 nodes, 2DOF each, is a 4 by 4
                  % matrix. 
   kb2=kb1; %Stiffness matrix for the x-z plane beam element. 
   l=norm([x2 y2 z2]-[x1 y1 z1]);
@@ -211,22 +210,21 @@ if strcmp(mode,'make')
     DoverL=.1;
   end
   %Euler bernoulli beams must be slender. Warn if not. 
-  if sqrt(A1*4/pi)/l>DoverL|sqrt(A2*4/pi)/l>DoverL|sqrt(A3*4/pi)/l>DoverL
+  if sqrt(A1*4/pi)/l>DoverL|sqrt(A2*4/pi)/l>DoverL
     warndlg({['Dimensions of element ' num2str(elnum) ' using properties '...
 	      propertynum ' are more suitable for a Timoshenko beam.'];...
 	     'radius divided by length is too large'},...
 	    'Improper application of element.','replace')
   end
   % This took some work, but provide bounds on other values. 
-  if (Izz1+Iyy1)<(1/2.1*A1^2/pi)|(Izz2+Iyy2)<(1/2.1*A2^2/pi)|(Izz3+Iyy3)<(1/2.1*A3^2/pi)
+  if (Izz1+Iyy1)<(1/2.1*A1^2/pi)|(Izz2+Iyy2)<(1/2.1*A2^2/pi)
     %2.0 would be exact for a circle
     warndlg({['Iyy+Izz for properties number' propertynum ' can''t be as '...
 	      'low as have been given.'];...
 	     'Nonphysical properties.'},['Impossible cross sectional' ...
 		    ' properties'],'replace')
   end
-  slenderness=min([sqrt((Izz1+Iyy1)/A1) sqrt((Izz2+Iyy2)/A2) ...
-		   sqrt((Izz3+Iyy3)/A3)  ])/l;
+  slenderness=min([sqrt((Izz1+Iyy1)/A1) sqrt((Izz2+Iyy2)/A2)])/l;
   % Check if this is a beam or something so thin that its really a
   % string. 
   if slenderness<.002
