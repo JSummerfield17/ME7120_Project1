@@ -237,59 +237,53 @@ if strcmp(mode,'make')
           % code yells at you)
           % Local Bending in x-y plane
   for i=1:numbeamgauss
-    beamsfs=[polyval(bn1dd,bgpts(i))/Jac^2;%evaluating second
+        beamsfs=[polyval(bn1dd,bgpts(i))/Jac^2;%evaluating second
                                            %derivatives of shape
                                            %functions to use in
                                            %generating stiffness
                                            %matrix. (at gauss point)
              polyval(bn2dd,bgpts(i))/Jac;
              polyval(bn3dd,bgpts(i))/Jac^2;
-             polyval(bn4dd,bgpts(i))/Jac;
-             polyval(bn5dd,bgpts(i))/Jac^2;
-             polyval(bn6dd,bgpts(i))/Jac];
-    Izz=polyval(rn1*Izz1+rn2*Izz2+rn3*Izz3,bgpts(i));%Find Izz at
-                                                     %Gauss point
-    kb1=kb1+bgpw(i)*beamsfs*beamsfs'*Izz*E*Jac;%This is the Gauss
-                                               %integration part. 
+             polyval(bn4dd,bgpts(i))/Jac];
+             
+    Izz=polyval(rn1*Izz1+rn2*Izz2,bgpts(i));%Find Izz at
+                                            %Gauss point
+    kb1=kb1+bgpw(i)*beamsfs*beamsfs'*Izz*E*Jac;% This is the gauss
+                                               % integration part
   end
-  % Local Bending in x-z plane
+                                              
+% Local Bending in x-z plane
   for i=1:numbeamgauss
     beamsfs=[polyval(bn1dd,bgpts(i))/Jac^2;
              -polyval(bn2dd,bgpts(i))/Jac;
              polyval(bn3dd,bgpts(i))/Jac^2;
-             -polyval(bn4dd,bgpts(i))/Jac;
-             polyval(bn5dd,bgpts(i))/Jac^2;
-             -polyval(bn6dd,bgpts(i))/Jac];
-    Iyy=polyval(rn1*Iyy1+rn2*Iyy2+rn3*Iyy3,bgpts(i));
+             -polyval(bn4dd,bgpts(i))/Jac];
+    Iyy=polyval(rn1*Iyy1+rn2*Iyy2,bgpts(i));
     kb2=kb2+bgpw(i)*beamsfs*beamsfs'*Iyy*E*Jac;
   end
   
   % Local Extension in x, torsion about x
-  numrodgauss=3;% Number of points to use for gauss point integration
+  numrodgauss=2;% Number of points to use for gauss point integration
   [rgpts,rgpw]=gauss(numrodgauss);
-  krod=zeros(3,3);
-  ktor=zeros(3,3);
+  krod=zeros(2,2);
+  ktor=zeros(2,2);
   for i=1:numrodgauss
     rodsfs=[polyval(rn1d,rgpts(i))/Jac;
-            polyval(rn2d,rgpts(i))/Jac;
-            polyval(rn3d,rgpts(i))/Jac];
-    if (J1>(Iyy1+Izz1))|(J2>(Iyy2+Izz2))|(J3>(Iyy3+Izz3))
+            polyval(rn2d,rgpts(i))/Jac];
+    if (J1>(Iyy1+Izz1))|(J2>(Iyy2+Izz2))
       if (J1>(Iyy1+Izz1))
 	disp('WARNING: J1 must be <= Iyy1+Izz1')%More checks for reality
       end
       if (J2>(Iyy2+Izz2))
 	disp('WARNING: J2 must be <= Iyy2+Izz2')%More checks for reality
       end
-      if (J3>(Iyy3+Izz3))
-	disp('WARNING: J3 must be <= Iyy3+Izz3')%More checks for reality
-      end
-      disp(['Error in element properties number '... 
+        disp(['Error in element properties number '... 
 	    num2str(element(elnum).properties) ...
 	    'used by element ' num2str(elnum) ' on line'...
 	    num2str(element(elnum).lineno) '.'])
     end
-    J=polyval(rn1*J1+rn2*J2+rn3*J3,rgpts(i));% J at gauss point.
-    A=polyval(rn1*A1+rn2*A2+rn3*A3,rgpts(i));% A at gauss point
+    J=polyval(rn1*J1+rn2*J2,rgpts(i));% J at gauss point.
+    A=polyval(rn1*A1+rn2*A2,rgpts(i));% A at gauss point
     krod=krod+rgpw(i)*rodsfs*rodsfs'*A*E*Jac;%Since the shape
                                              %functions and Gauss
                                              %points are the same,
