@@ -125,22 +125,18 @@ if strcmp(mode,'make')||strcmp(mode,'istrainforces')
                                               % need for your use. 
   
 % 
-  if length(bprops)==15
+  if length(bprops)==11
       E=bprops(1);
       G=bprops(2);
       rho=bprops(3);
       A1=bprops(4);
       A2=bprops(5);
-      A3=bprops(6);
-      J1=bprops(7);
-      J2=bprops(8);
-      J3=bprops(9);
-      Izz1=bprops(10);
-      Izz2=bprops(11);
-      Izz3=bprops(12);
-      Iyy1=bprops(13);
-      Iyy2=bprops(14);
-      Iyy3=bprops(15);
+      J1=bprops(6);
+      J2=bprops(7);
+      Izz1=bprops(8);
+      Izz2=bprops(9);
+      Iyy1=bprops(10);
+      Iyy2=bprops(11);
   else
       warndlg(['The number of material properties set for ' ...
                'this element (' num2str(length(bprops)) ') isn''t ' ...
@@ -153,7 +149,7 @@ end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Beam properties (bprops) are in the order
-% bprops=[E G rho A1 A2 A3 J1 J2 J3 Izz1 Izz2 Izz3 Iyy1 Iyy2 Iyy3]
+% bprops=[E G rho A1 A2 J1 J2 Izz1 Izz2 Iyy1 Iyy2]
 % For a linear beam they are
 % bprops=[E G rho A1 A2 J1 J2 Izz1 Izz2 Iyy1 Iyy2]
 
