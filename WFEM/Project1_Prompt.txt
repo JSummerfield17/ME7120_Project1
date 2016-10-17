@@ -77,7 +77,7 @@ fix clamp
 %Ensure change correlates with Project1.m file
 load 
 %node# dof# load
-2 1 10
+21 1 10
 
 %fix pin
 %1 0 0 1
