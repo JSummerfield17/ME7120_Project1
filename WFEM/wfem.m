@@ -363,3 +363,6 @@ if nargout==1
   outputfinal=output;
 end
 cd(oldpath)
+
+M_Full = full(M)
+K_Full = full(K)

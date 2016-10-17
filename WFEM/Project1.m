@@ -390,8 +390,6 @@ if strcmp(mode,'make')
   lam(4:6,4:6)=lamloc;
   lam(7:9,7:9)=lamloc;
   lam(10:12,10:12)=lamloc;
-%   lam
-%   lamloc
   
 % $$$     lam=[lamloc z z z z z;
 % $$$          z lamloc z z z z;
@@ -405,6 +403,7 @@ if strcmp(mode,'make')
 
   kg=lam'*k*lam;
   mg=lam'*m*lam;
+%   Trans = full(lam)
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
