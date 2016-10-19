@@ -193,8 +193,8 @@ if strcmp(mode,'make')
   
   % Shape functions in matrix polynomial form (polyval style) for 
   % torsion/rod
-  rn1=[0.5 -.5];
-  rn1d=[0.5];
+  rn1=[-0.5 0.5];
+  rn1d=[-0.5];
   rn2=[.5 .5];
   rn2d=[0.5];
   

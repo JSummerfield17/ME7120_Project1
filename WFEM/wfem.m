@@ -364,5 +364,5 @@ if nargout==1
 end
 cd(oldpath)
 
-M_Full = full(M)
-K_Full = full(K)
+M_Full = full(M);
+K_Full = full(K);
