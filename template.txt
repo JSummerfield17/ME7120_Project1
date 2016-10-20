@@ -46,7 +46,7 @@ MPTEMP,1,0
 MPDATA,EX,1,,4.26e9 
 MPDATA,PRXY,1,,0.35  
 K,1,0,0,0,  
-K,2,25,0,0, 
+K,2,1,0,0, 
 LSTR,       1,       2  
 !*  
 LESIZE,ALL, , ,2, ,1, , ,1, 
