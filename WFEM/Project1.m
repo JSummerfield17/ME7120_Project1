@@ -417,6 +417,7 @@ if strcmp(mode,'make')
 
   K(indices,indices)=K(indices,indices)+kg;
   M(indices,indices)=M(indices,indices)+mg;
+  
 
   % At this point we also know how to draw the element (what lines
   % and surfaces exist). For the beam3 element, 2 lines are

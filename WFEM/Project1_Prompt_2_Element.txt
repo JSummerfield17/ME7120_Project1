@@ -3,7 +3,7 @@ variables
 t=0.02
 l=25
 Ixx1=1/12*t^4
-Ixx2=1/12*(1/2*t)^4
+Ixx2=1/12*(t/2)^4
 Iyy1=Ixx1
 Iyy2=Ixx2
 J1=0.95*(Ixx1+Iyy1)
@@ -79,9 +79,10 @@ disp('See, the natural frequency doubled as expected') % I wrote this out
 %to the output for the user to read after execution.
 % Uncommenting this line will cause an exit from WFEM immediately after 
 % execution
-%end
+% end
 %Let's do static analysis
 staticanalysis
 plotdeformed
 %Here are the displacements, X
 X
+
