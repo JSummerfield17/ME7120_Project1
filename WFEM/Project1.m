@@ -402,7 +402,7 @@ if strcmp(mode,'make')
   element(elnum).k=k;
 %     eig(k)
 %     pause
-  kg=lam'*k*lam
+  kg=lam'*k*lam;
   mg=lam'*m*lam;
 %   Trans = full(lam)
 
