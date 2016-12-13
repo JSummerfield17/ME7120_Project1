@@ -1,0 +1,1171 @@
+/BATCH  
+/COM,ANSYS RELEASE 12.1    UP20091102       19:45:12    10/23/2016
+/input,menust,tmp,'',,,,,,,,,,,,,,,,1   
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+/REPLOT,RESIZE  
+!*  
+/NOPR   
+/PMETH,OFF,0
+KEYW,PR_SET,1   
+KEYW,PR_STRUC,1 
+KEYW,PR_THERM,0 
+KEYW,PR_FLUID,0 
+KEYW,PR_ELMAG,0 
+KEYW,MAGNOD,0   
+KEYW,MAGEDG,0   
+KEYW,MAGHFE,0   
+KEYW,MAGELC,0   
+KEYW,PR_MULTI,0 
+KEYW,PR_CFD,0   
+/GO 
+!*  
+/COM,   
+/COM,Preferences for GUI filtering have been set to display:
+/COM,  Structural   
+!*  
+/PREP7  
+!*  
+ET,1,BEAM4  
+!*  
+R,1,0.0001,8.3e-10,8.3e-10, , , ,   
+RMORE, ,1.58e-9, , , , ,
+!*  
+!*  
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,EX,1,,2.04e11
+MPDATA,PRXY,1,,0.33 
+K,1,0,0,0,  
+K,2,1/4,0,0,
+K,3,1/2,0,0,
+K,4,3/4,0,0,
+K,5,1,0,0,  
+K,6,1,1/2,0,
+K,7,3/4,1/2,0,  
+K,8,1/2,1/2,0,  
+K,9,1/4,1/2,0,  
+K,10,0,1/2,0,   
+K,11,0,0,1/2,   
+K,12,1/4,0,1/2, 
+K,13,1/2,0,1/2, 
+K,14,3/4,0,1/2, 
+K,15,1,0,1/2,   
+K,16,1,1/2,1/2, 
+K,17,3/4,1/2,1/2,   
+K,18,1/2,1/2,1/2,   
+K,19,1/4,1/2,1/2,   
+K,20,0,1/2,1/2, 
+/USER,  1   
+/VIEW,  1, -0.785983784169    , -0.483616897664    ,  0.385154757621
+/ANG,   1,   79.8742370761  
+/REPLO  
+/REPLOT,RESIZE  
+LSTR,       1,       2  
+LSTR,       2,       3  
+LSTR,       3,       4  
+LSTR,       4,       5  
+LSTR,       5,       6  
+LSTR,       6,       7  
+LSTR,       7,       8  
+LSTR,       8,       9  
+LSTR,       9,      10  
+LSTR,      10,       1  
+LSTR,      11,      12  
+LSTR,      12,      13  
+LSTR,      13,      14  
+LSTR,      14,      15  
+LSTR,      15,      16  
+LSTR,      16,      17  
+LSTR,      17,      18  
+LSTR,      18,      19  
+LSTR,      19,      20  
+LSTR,      20,      11  
+LSTR,      20,      10  
+LSTR,      11,       1  
+LSTR,      16,       6  
+LSTR,      15,       5  
+LSTR,       1,       9  
+LSTR,       9,       2  
+LSTR,       9,       3  
+LSTR,       3,       7  
+LSTR,       7,       4  
+LSTR,       7,       5  
+LSTR,       8,       3  
+LSTR,      11,      19  
+LSTR,      19,      13  
+LSTR,      19,      12  
+LSTR,      18,      13  
+LSTR,      13,      17  
+LSTR,      17,      15  
+LSTR,      17,      14  
+LSTR,      19,       9  
+LSTR,      18,       8  
+LSTR,      17,       7  
+LSTR,      14,       4  
+LSTR,      13,       3  
+LSTR,      12,       2  
+!*  
+LESIZE,ALL, , ,1, ,1, , ,1, 
+KPLOT   
+/PNUM,KP,1  
+/PNUM,LINE,0
+/PNUM,AREA,0
+/PNUM,VOLU,0
+/PNUM,NODE,0
+/PNUM,TABN,0
+/PNUM,SVAL,0
+/NUMBER,0   
+!*  
+/PNUM,ELEM,0
+/REPLOT 
+!*  
+LPLOT   
+FLST,2,44,4,ORDE,2  
+FITEM,2,1   
+FITEM,2,-44 
+LMESH,P51X  
+KPLOT   
+LPLOT   
+FLST,2,6,3,ORDE,6   
+FITEM,2,1   
+FITEM,2,5   
+FITEM,2,10  
+FITEM,2,15  
+FITEM,2,-16 
+FITEM,2,20  
+FLST,2,8,3,ORDE,8   
+FITEM,2,1   
+FITEM,2,5   
+FITEM,2,-6  
+FITEM,2,10  
+FITEM,2,-11 
+FITEM,2,15  
+FITEM,2,-16 
+FITEM,2,20  
+!*  
+/GO 
+DK,P51X, ,0, ,0,ALL, , , , , ,  
+FLST,2,1,3,ORDE,1   
+FITEM,2,8   
+!*  
+/GO 
+FK,P51X,FY,-100 
+FLST,2,1,3,ORDE,1   
+FITEM,2,18  
+!*  
+/GO 
+FK,P51X,FY,-100 
+FINISH  
+/SOL
+/STATUS,SOLU
+SOLVE   
+FINISH  
+/POST1  
+PLDISP,1
+FINISH  
+! /EXIT,ALL 
+/BATCH  
+/COM,ANSYS RELEASE 12.1    UP20091102       19:52:30    10/23/2016
+/input,menust,tmp,'',,,,,,,,,,,,,,,,1   
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+RESUME,'complex_beam','db','.'  
+/COM,ANSYS RELEASE 12.1    UP20091102       19:52:35    10/23/2016
+/POST1  
+PLDISP,1
+FINISH  
+! /EXIT,NOSAV   
+/BATCH  
+/COM,ANSYS RELEASE 12.1    UP20091102       19:53:44    10/23/2016
+/input,menust,tmp,'',,,,,,,,,,,,,,,,1   
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+RESUME,'complex_beam','db','.'  
+/COM,ANSYS RELEASE 12.1    UP20091102       19:53:53    10/23/2016
+/POST1  
+PLDISP,1
+/VIEW,1,,1  
+/ANG,1  
+/REP,FAST   
+/VIEW,1,,,-1
+/ANG,1  
+/REP,FAST   
+!*  
+/PSF,DEFA, ,1,0,1   
+/PBF,DEFA, ,1   
+/PIC,DEFA, ,1   
+/PSYMB,CS,0 
+/PSYMB,NDIR,0   
+/PSYMB,ESYS,0   
+/PSYMB,LDIV,0   
+/PSYMB,LDIR,0   
+/PSYMB,ADIR,0   
+/PSYMB,ECON,0   
+/PSYMB,XNODE,0  
+/PSYMB,DOT,1
+/PSYMB,PCONV,   
+/PSYMB,LAYR,0   
+/PSYMB,FBCS,0   
+!*  
+/PBC,ALL,,1 
+/PBC,NFOR,,0
+/PBC,NMOM,,0
+/PBC,RFOR,,0
+/PBC,RMOM,,0
+/PBC,PATH,,0
+/REP
+!*  
+/REPLOT,RESIZE  
+/REPLOT,RESIZE  
+/VIEW,1,1,1,1   
+/ANG,1  
+/REP,FAST   
+/ZOOM,1,RECT,0.181683,0.0357814 ,0.371742121972 ,0.15423031027  
+/AUTO,1 
+/REP,FAST   
+/USER,  1   
+/VIEW,  1, -0.399794510794    ,  0.751887333970E-01,  0.913515737965
+/ANG,   1,   23.2506466065  
+/REPLO  
+/VIEW,  1, -0.452784354872    ,  0.642512246543    , -0.618194420086
+/ANG,   1,  -13.9957118045  
+/REPLO  
+/VIEW,  1, -0.862259240676    ,  0.497942670689E-01, -0.504013425254
+/ANG,   1,  -4.08418026090  
+/REPLO  
+/VIEW,  1, -0.838977359039    , -0.487032622441    ,  0.242726627501
+/ANG,   1,   74.8437093371  
+/REPLO  
+/VIEW,  1, -0.777901905126    , -0.585502669573    ,  0.228156196332
+/ANG,   1,   83.7189770814  
+/REPLO  
+/DIST,1,1.08222638492,1 
+/REP,FAST   
+/DIST,1,1.08222638492,1 
+/REP,FAST   
+/DIST,1,0.924021086472,1
+/REP,FAST   
+/DIST,1,0.924021086472,1
+/REP,FAST   
+/DIST,1,0.924021086472,1
+/REP,FAST   
+/DIST,1,0.924021086472,1
+/REP,FAST   
+/DIST,1,0.924021086472,1
+/REP,FAST   
+/DIST,1,0.924021086472,1
+/REP,FAST   
+/DIST,1,0.924021086472,1
+/REP,FAST   
+/DIST,1,0.924021086472,1
+/REP,FAST   
+/VIEW,  1, -0.788888771589    , -0.574174964276    ,  0.219037933837
+/ANG,   1,   86.2960634127  
+/REPLO  
+/DIST,  1,  0.428723753538  
+/ANG,   1,   79.3960634127  
+/REPLO  
+/FOC,   1,  0.500588643186    ,  0.234578966535    ,  0.251271409926
+/REPLO  
+/VIEW,  1, -0.775071139189    , -0.560895047830    ,  0.290966449124
+/ANG,   1,   76.1663162521  
+/REPLO  
+/REPLOT,RESIZE  
+/REPLOT,RESIZE  
+FINISH  
+! /EXIT,ALL 
+/BATCH  
+/COM,ANSYS RELEASE 12.1    UP20091102       20:00:23    10/23/2016
+/input,menust,tmp,'',,,,,,,,,,,,,,,,1   
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+/REPLOT,RESIZE  
+/COM,ANSYS RELEASE 12.1    UP20091102       19:45:12    10/23/2016  
+/input,menust,tmp,'',,,,,,,,,,,,,,,,1   
+/GRA,POWER  
+/GST,ON 
+/PLO,INFO,3 
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+/REPLOT,RESIZE  
+!*  
+/NOPR   
+/PMETH,OFF,0
+KEYW,PR_SET,1   
+KEYW,PR_STRUC,1 
+KEYW,PR_THERM,0 
+KEYW,PR_FLUID,0 
+KEYW,PR_ELMAG,0 
+KEYW,MAGNOD,0   
+KEYW,MAGEDG,0   
+KEYW,MAGHFE,0   
+KEYW,MAGELC,0   
+KEYW,PR_MULTI,0 
+KEYW,PR_CFD,0   
+/GO 
+!*  
+/COM,   
+/COM,Preferences for GUI filtering have been set to display:
+/COM,  Structural   
+!*  
+/PREP7  
+!*  
+ET,1,BEAM4  
+!*  
+R,1,0.0001,8.3e-10,8.3e-10, , , ,   
+RMORE, ,1.58e-9, , , , ,
+!*  
+!*  
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,EX,1,,2.04e11
+MPDATA,PRXY,1,,0.33 
+K,1,0,0,0,  
+K,2,1/4,0,0,
+K,3,1/2,0,0,
+K,4,3/4,0,0,
+K,5,1,0,0,  
+K,6,1,1/2,0,
+K,7,3/4,1/2,0,  
+K,8,1/2,1/2,0,  
+K,9,1/4,1/2,0,  
+K,10,0,1/2,0,   
+K,11,0,0,1/2,   
+K,12,1/4,0,1/2, 
+K,13,1/2,0,1/2, 
+K,14,3/4,0,1/2, 
+K,15,1,0,1/2,   
+K,16,1,1/2,1/2, 
+K,17,3/4,1/2,1/2,   
+K,18,1/2,1/2,1/2,   
+K,19,1/4,1/2,1/2,   
+K,20,0,1/2,1/2, 
+/USER,  1   
+/VIEW,  1, -0.785983784169    , -0.483616897664    ,  0.385154757621
+/ANG,   1,   79.8742370761  
+/REPLO  
+/REPLOT,RESIZE  
+LSTR,       1,       2  
+LSTR,       2,       3  
+LSTR,       3,       4  
+LSTR,       4,       5  
+LSTR,       5,       6  
+LSTR,       6,       7  
+LSTR,       7,       8  
+LSTR,       8,       9  
+LSTR,       9,      10  
+LSTR,      10,       1  
+LSTR,      11,      12  
+LSTR,      12,      13  
+LSTR,      13,      14  
+LSTR,      14,      15  
+LSTR,      15,      16  
+LSTR,      16,      17  
+LSTR,      17,      18  
+LSTR,      18,      19  
+LSTR,      19,      20  
+LSTR,      20,      11  
+LSTR,      20,      10  
+LSTR,      11,       1  
+LSTR,      16,       6  
+LSTR,      15,       5  
+LSTR,       1,       9  
+LSTR,       9,       2  
+LSTR,       9,       3  
+LSTR,       3,       7  
+LSTR,       7,       4  
+LSTR,       7,       5  
+LSTR,       8,       3  
+LSTR,      11,      19  
+LSTR,      19,      13  
+LSTR,      19,      12  
+LSTR,      18,      13  
+LSTR,      13,      17  
+LSTR,      17,      15  
+LSTR,      17,      14  
+LSTR,      19,       9  
+LSTR,      18,       8  
+LSTR,      17,       7  
+LSTR,      14,       4  
+LSTR,      13,       3  
+LSTR,      12,       2  
+!*  
+LESIZE,ALL, , ,2, ,1, , ,1, 
+KPLOT   
+/PNUM,KP,1  
+/PNUM,LINE,0
+/PNUM,AREA,0
+/PNUM,VOLU,0
+/PNUM,NODE,0
+/PNUM,TABN,0
+/PNUM,SVAL,0
+/NUMBER,0   
+!*  
+/PNUM,ELEM,0
+/REPLOT 
+!*  
+LPLOT   
+FLST,2,44,4,ORDE,2  
+FITEM,2,1   
+FITEM,2,-44 
+LMESH,P51X  
+KPLOT   
+LPLOT   
+FLST,2,6,3,ORDE,6   
+FITEM,2,1   
+FITEM,2,5   
+FITEM,2,10  
+FITEM,2,15  
+FITEM,2,-16 
+FITEM,2,20  
+FLST,2,8,3,ORDE,8   
+FITEM,2,1   
+FITEM,2,5   
+FITEM,2,-6  
+FITEM,2,10  
+FITEM,2,-11 
+FITEM,2,15  
+FITEM,2,-16 
+FITEM,2,20  
+!*  
+/GO 
+DK,P51X, ,0, ,0,ALL, , , , , ,  
+FLST,2,1,3,ORDE,1   
+FITEM,2,8   
+!*  
+/GO 
+FK,P51X,FY,-100 
+FLST,2,1,3,ORDE,1   
+FITEM,2,18  
+!*  
+/GO 
+FK,P51X,FY,-100 
+FINISH  
+/SOL
+/STATUS,SOLU
+SOLVE   
+FINISH  
+/POST1  
+PLDISP,1
+FINISH  
+! /EXIT,ALL 
+/COM,ANSYS RELEASE 12.1    UP20091102       19:52:30    10/23/2016  
+/input,menust,tmp,'',,,,,,,,,,,,,,,,1   
+/GRA,POWER  
+/GST,ON 
+/PLO,INFO,3 
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+RESUME,'complex_beam','db','.'  
+/COM,ANSYS RELEASE 12.1    UP20091102       20:00:59    10/23/2016
+/COM,ANSYS RELEASE 12.1    UP20091102       19:52:35    10/23/2016  
+/POST1  
+PLDISP,1
+FINISH  
+! /EXIT,NOSAV   
+FINISH  
+! /EXIT,ALL 
+/BATCH  
+/COM,ANSYS RELEASE 12.1    UP20091102       20:01:52    10/23/2016
+/input,menust,tmp,'',,,,,,,,,,,,,,,,1   
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+/COM,ANSYS RELEASE 12.1    UP20091102       19:45:12    10/23/2016  
+/input,menust,tmp,'',,,,,,,,,,,,,,,,1   
+/GRA,POWER  
+/GST,ON 
+/PLO,INFO,3 
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+/REPLOT,RESIZE  
+!*  
+/NOPR   
+/PMETH,OFF,0
+KEYW,PR_SET,1   
+KEYW,PR_STRUC,1 
+KEYW,PR_THERM,0 
+KEYW,PR_FLUID,0 
+KEYW,PR_ELMAG,0 
+KEYW,MAGNOD,0   
+KEYW,MAGEDG,0   
+KEYW,MAGHFE,0   
+KEYW,MAGELC,0   
+KEYW,PR_MULTI,0 
+KEYW,PR_CFD,0   
+/GO 
+!*  
+/COM,   
+/COM,Preferences for GUI filtering have been set to display:
+/COM,  Structural   
+!*  
+/PREP7  
+!*  
+ET,1,BEAM4  
+!*  
+R,1,0.0001,8.3e-10,8.3e-10, , , ,   
+RMORE, ,1.58e-9, , , , ,
+!*  
+!*  
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,EX,1,,2.04e11
+MPDATA,PRXY,1,,0.33 
+K,1,0,0,0,  
+K,2,1/4,0,0,
+K,3,1/2,0,0,
+K,4,3/4,0,0,
+K,5,1,0,0,  
+K,6,1,1/2,0,
+K,7,3/4,1/2,0,  
+K,8,1/2,1/2,0,  
+K,9,1/4,1/2,0,  
+K,10,0,1/2,0,   
+K,11,0,0,1/2,   
+K,12,1/4,0,1/2, 
+K,13,1/2,0,1/2, 
+K,14,3/4,0,1/2, 
+K,15,1,0,1/2,   
+K,16,1,1/2,1/2, 
+K,17,3/4,1/2,1/2,   
+K,18,1/2,1/2,1/2,   
+K,19,1/4,1/2,1/2,   
+K,20,0,1/2,1/2, 
+/USER,  1   
+/VIEW,  1, -0.785983784169    , -0.483616897664    ,  0.385154757621
+/ANG,   1,   79.8742370761  
+/REPLO  
+/REPLOT,RESIZE  
+LSTR,       1,       2  
+LSTR,       2,       3  
+LSTR,       3,       4  
+LSTR,       4,       5  
+LSTR,       5,       6  
+LSTR,       6,       7  
+LSTR,       7,       8  
+LSTR,       8,       9  
+LSTR,       9,      10  
+LSTR,      10,       1  
+LSTR,      11,      12  
+LSTR,      12,      13  
+LSTR,      13,      14  
+LSTR,      14,      15  
+LSTR,      15,      16  
+LSTR,      16,      17  
+LSTR,      17,      18  
+LSTR,      18,      19  
+LSTR,      19,      20  
+LSTR,      20,      11  
+LSTR,      20,      10  
+LSTR,      11,       1  
+LSTR,      16,       6  
+LSTR,      15,       5  
+LSTR,       1,       9  
+LSTR,       9,       2  
+LSTR,       9,       3  
+LSTR,       3,       7  
+LSTR,       7,       4  
+LSTR,       7,       5  
+LSTR,       8,       3  
+LSTR,      11,      19  
+LSTR,      19,      13  
+LSTR,      19,      12  
+LSTR,      18,      13  
+LSTR,      13,      17  
+LSTR,      17,      15  
+LSTR,      17,      14  
+LSTR,      19,       9  
+LSTR,      18,       8  
+LSTR,      17,       7  
+LSTR,      14,       4  
+LSTR,      13,       3  
+LSTR,      12,       2  
+!*  
+LESIZE,ALL, , ,5, ,1, , ,1, 
+KPLOT   
+/PNUM,KP,1  
+/PNUM,LINE,0
+/PNUM,AREA,0
+/PNUM,VOLU,0
+/PNUM,NODE,0
+/PNUM,TABN,0
+/PNUM,SVAL,0
+/NUMBER,0   
+!*  
+/PNUM,ELEM,0
+/REPLOT 
+!*  
+LPLOT   
+FLST,2,44,4,ORDE,2  
+FITEM,2,1   
+FITEM,2,-44 
+LMESH,P51X  
+KPLOT   
+LPLOT   
+FLST,2,6,3,ORDE,6   
+FITEM,2,1   
+FITEM,2,5   
+FITEM,2,10  
+FITEM,2,15  
+FITEM,2,-16 
+FITEM,2,20  
+FLST,2,8,3,ORDE,8   
+FITEM,2,1   
+FITEM,2,5   
+FITEM,2,-6  
+FITEM,2,10  
+FITEM,2,-11 
+FITEM,2,15  
+FITEM,2,-16 
+FITEM,2,20  
+!*  
+/GO 
+DK,P51X, ,0, ,0,ALL, , , , , ,  
+FLST,2,1,3,ORDE,1   
+FITEM,2,8   
+!*  
+/GO 
+FK,P51X,FY,-100 
+FLST,2,1,3,ORDE,1   
+FITEM,2,18  
+!*  
+/GO 
+FK,P51X,FY,-100 
+FINISH  
+/SOL
+/STATUS,SOLU
+SOLVE   
+FINISH  
+/POST1  
+PLDISP,1
+FINISH  
+! /EXIT,ALL 
+/COM,ANSYS RELEASE 12.1    UP20091102       19:52:30    10/23/2016  
+/input,menust,tmp,'',,,,,,,,,,,,,,,,1   
+/GRA,POWER  
+/GST,ON 
+/PLO,INFO,3 
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+RESUME,'complex_beam','db','.'  
+/COM,ANSYS RELEASE 12.1    UP20091102       20:02:00    10/23/2016
+/COM,ANSYS RELEASE 12.1    UP20091102       19:52:35    10/23/2016  
+/POST1  
+PLDISP,1
+FINISH  
+! /EXIT,NOSAV   
+FINISH  
+! /EXIT,NOSAV   
+/BATCH  
+/COM,ANSYS RELEASE 12.1    UP20091102       20:03:03    10/23/2016
+/input,menust,tmp,'',,,,,,,,,,,,,,,,1   
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+/COM,ANSYS RELEASE 12.1    UP20091102       19:45:12    10/23/2016  
+/input,menust,tmp,'',,,,,,,,,,,,,,,,1   
+/GRA,POWER  
+/GST,ON 
+/PLO,INFO,3 
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+/REPLOT,RESIZE  
+!*  
+/NOPR   
+/PMETH,OFF,0
+KEYW,PR_SET,1   
+KEYW,PR_STRUC,1 
+KEYW,PR_THERM,0 
+KEYW,PR_FLUID,0 
+KEYW,PR_ELMAG,0 
+KEYW,MAGNOD,0   
+KEYW,MAGEDG,0   
+KEYW,MAGHFE,0   
+KEYW,MAGELC,0   
+KEYW,PR_MULTI,0 
+KEYW,PR_CFD,0   
+/GO 
+!*  
+/COM,   
+/COM,Preferences for GUI filtering have been set to display:
+/COM,  Structural   
+!*  
+/PREP7  
+!*  
+ET,1,BEAM4  
+!*  
+R,1,0.0001,8.3e-10,8.3e-10, , , ,   
+RMORE, ,1.58e-9, , , , ,
+!*  
+!*  
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,EX,1,,2.04e11
+MPDATA,PRXY,1,,0.33 
+K,1,0,0,0,  
+K,2,1/4,0,0,
+K,3,1/2,0,0,
+K,4,3/4,0,0,
+K,5,1,0,0,  
+K,6,1,1/2,0,
+K,7,3/4,1/2,0,  
+K,8,1/2,1/2,0,  
+K,9,1/4,1/2,0,  
+K,10,0,1/2,0,   
+K,11,0,0,1/2,   
+K,12,1/4,0,1/2, 
+K,13,1/2,0,1/2, 
+K,14,3/4,0,1/2, 
+K,15,1,0,1/2,   
+K,16,1,1/2,1/2, 
+K,17,3/4,1/2,1/2,   
+K,18,1/2,1/2,1/2,   
+K,19,1/4,1/2,1/2,   
+K,20,0,1/2,1/2, 
+/USER,  1   
+/VIEW,  1, -0.785983784169    , -0.483616897664    ,  0.385154757621
+/ANG,   1,   79.8742370761  
+/REPLO  
+/REPLOT,RESIZE  
+LSTR,       1,       2  
+LSTR,       2,       3  
+LSTR,       3,       4  
+LSTR,       4,       5  
+LSTR,       5,       6  
+LSTR,       6,       7  
+LSTR,       7,       8  
+LSTR,       8,       9  
+LSTR,       9,      10  
+LSTR,      10,       1  
+LSTR,      11,      12  
+LSTR,      12,      13  
+LSTR,      13,      14  
+LSTR,      14,      15  
+LSTR,      15,      16  
+LSTR,      16,      17  
+LSTR,      17,      18  
+LSTR,      18,      19  
+LSTR,      19,      20  
+LSTR,      20,      11  
+LSTR,      20,      10  
+LSTR,      11,       1  
+LSTR,      16,       6  
+LSTR,      15,       5  
+LSTR,       1,       9  
+LSTR,       9,       2  
+LSTR,       9,       3  
+LSTR,       3,       7  
+LSTR,       7,       4  
+LSTR,       7,       5  
+LSTR,       8,       3  
+LSTR,      11,      19  
+LSTR,      19,      13  
+LSTR,      19,      12  
+LSTR,      18,      13  
+LSTR,      13,      17  
+LSTR,      17,      15  
+LSTR,      17,      14  
+LSTR,      19,       9  
+LSTR,      18,       8  
+LSTR,      17,       7  
+LSTR,      14,       4  
+LSTR,      13,       3  
+LSTR,      12,       2  
+!*  
+LESIZE,ALL, , ,10, ,1, , ,1,
+KPLOT   
+/PNUM,KP,1  
+/PNUM,LINE,0
+/PNUM,AREA,0
+/PNUM,VOLU,0
+/PNUM,NODE,0
+/PNUM,TABN,0
+/PNUM,SVAL,0
+/NUMBER,0   
+!*  
+/PNUM,ELEM,0
+/REPLOT 
+!*  
+LPLOT   
+FLST,2,44,4,ORDE,2  
+FITEM,2,1   
+FITEM,2,-44 
+LMESH,P51X  
+KPLOT   
+LPLOT   
+FLST,2,6,3,ORDE,6   
+FITEM,2,1   
+FITEM,2,5   
+FITEM,2,10  
+FITEM,2,15  
+FITEM,2,-16 
+FITEM,2,20  
+FLST,2,8,3,ORDE,8   
+FITEM,2,1   
+FITEM,2,5   
+FITEM,2,-6  
+FITEM,2,10  
+FITEM,2,-11 
+FITEM,2,15  
+FITEM,2,-16 
+FITEM,2,20  
+!*  
+/GO 
+DK,P51X, ,0, ,0,ALL, , , , , ,  
+FLST,2,1,3,ORDE,1   
+FITEM,2,8   
+!*  
+/GO 
+FK,P51X,FY,-100 
+FLST,2,1,3,ORDE,1   
+FITEM,2,18  
+!*  
+/GO 
+FK,P51X,FY,-100 
+FINISH  
+/SOL
+/STATUS,SOLU
+SOLVE   
+FINISH  
+/POST1  
+PLDISP,1
+FINISH  
+! /EXIT,ALL 
+/COM,ANSYS RELEASE 12.1    UP20091102       19:52:30    10/23/2016  
+/input,menust,tmp,'',,,,,,,,,,,,,,,,1   
+/GRA,POWER  
+/GST,ON 
+/PLO,INFO,3 
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+RESUME,'complex_beam','db','.'  
+/COM,ANSYS RELEASE 12.1    UP20091102       20:03:11    10/23/2016
+/COM,ANSYS RELEASE 12.1    UP20091102       19:52:35    10/23/2016  
+/POST1  
+PLDISP,1
+FINISH  
+! /EXIT,NOSAV   
+FINISH  
+! /EXIT,NOSAV   
+/BATCH  
+/COM,ANSYS RELEASE 12.1    UP20091102       20:03:56    10/23/2016
+/input,menust,tmp,'',,,,,,,,,,,,,,,,1   
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+/REPLOT,RESIZE  
+/COM,ANSYS RELEASE 12.1    UP20091102       19:45:12    10/23/2016  
+/input,menust,tmp,'',,,,,,,,,,,,,,,,1   
+/GRA,POWER  
+/GST,ON 
+/PLO,INFO,3 
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+/REPLOT,RESIZE  
+!*  
+/NOPR   
+/PMETH,OFF,0
+KEYW,PR_SET,1   
+KEYW,PR_STRUC,1 
+KEYW,PR_THERM,0 
+KEYW,PR_FLUID,0 
+KEYW,PR_ELMAG,0 
+KEYW,MAGNOD,0   
+KEYW,MAGEDG,0   
+KEYW,MAGHFE,0   
+KEYW,MAGELC,0   
+KEYW,PR_MULTI,0 
+KEYW,PR_CFD,0   
+/GO 
+!*  
+/COM,   
+/COM,Preferences for GUI filtering have been set to display:
+/COM,  Structural   
+!*  
+/PREP7  
+!*  
+ET,1,BEAM4  
+!*  
+R,1,0.0001,8.3e-10,8.3e-10, , , ,   
+RMORE, ,1.58e-9, , , , ,
+!*  
+!*  
+MPTEMP,,,,,,,,  
+MPTEMP,1,0  
+MPDATA,EX,1,,2.04e11
+MPDATA,PRXY,1,,0.33 
+K,1,0,0,0,  
+K,2,1/4,0,0,
+K,3,1/2,0,0,
+K,4,3/4,0,0,
+K,5,1,0,0,  
+K,6,1,1/2,0,
+K,7,3/4,1/2,0,  
+K,8,1/2,1/2,0,  
+K,9,1/4,1/2,0,  
+K,10,0,1/2,0,   
+K,11,0,0,1/2,   
+K,12,1/4,0,1/2, 
+K,13,1/2,0,1/2, 
+K,14,3/4,0,1/2, 
+K,15,1,0,1/2,   
+K,16,1,1/2,1/2, 
+K,17,3/4,1/2,1/2,   
+K,18,1/2,1/2,1/2,   
+K,19,1/4,1/2,1/2,   
+K,20,0,1/2,1/2, 
+/USER,  1   
+/VIEW,  1, -0.785983784169    , -0.483616897664    ,  0.385154757621
+/ANG,   1,   79.8742370761  
+/REPLO  
+/REPLOT,RESIZE  
+LSTR,       1,       2  
+LSTR,       2,       3  
+LSTR,       3,       4  
+LSTR,       4,       5  
+LSTR,       5,       6  
+LSTR,       6,       7  
+LSTR,       7,       8  
+LSTR,       8,       9  
+LSTR,       9,      10  
+LSTR,      10,       1  
+LSTR,      11,      12  
+LSTR,      12,      13  
+LSTR,      13,      14  
+LSTR,      14,      15  
+LSTR,      15,      16  
+LSTR,      16,      17  
+LSTR,      17,      18  
+LSTR,      18,      19  
+LSTR,      19,      20  
+LSTR,      20,      11  
+LSTR,      20,      10  
+LSTR,      11,       1  
+LSTR,      16,       6  
+LSTR,      15,       5  
+LSTR,       1,       9  
+LSTR,       9,       2  
+LSTR,       9,       3  
+LSTR,       3,       7  
+LSTR,       7,       4  
+LSTR,       7,       5  
+LSTR,       8,       3  
+LSTR,      11,      19  
+LSTR,      19,      13  
+LSTR,      19,      12  
+LSTR,      18,      13  
+LSTR,      13,      17  
+LSTR,      17,      15  
+LSTR,      17,      14  
+LSTR,      19,       9  
+LSTR,      18,       8  
+LSTR,      17,       7  
+LSTR,      14,       4  
+LSTR,      13,       3  
+LSTR,      12,       2  
+!*  
+LESIZE,ALL, , ,50, ,1, , ,1,
+KPLOT   
+/PNUM,KP,1  
+/PNUM,LINE,0
+/PNUM,AREA,0
+/PNUM,VOLU,0
+/PNUM,NODE,0
+/PNUM,TABN,0
+/PNUM,SVAL,0
+/NUMBER,0   
+!*  
+/PNUM,ELEM,0
+/REPLOT 
+!*  
+LPLOT   
+FLST,2,44,4,ORDE,2  
+FITEM,2,1   
+FITEM,2,-44 
+LMESH,P51X  
+KPLOT   
+LPLOT   
+FLST,2,6,3,ORDE,6   
+FITEM,2,1   
+FITEM,2,5   
+FITEM,2,10  
+FITEM,2,15  
+FITEM,2,-16 
+FITEM,2,20  
+FLST,2,8,3,ORDE,8   
+FITEM,2,1   
+FITEM,2,5   
+FITEM,2,-6  
+FITEM,2,10  
+FITEM,2,-11 
+FITEM,2,15  
+FITEM,2,-16 
+FITEM,2,20  
+!*  
+/GO 
+DK,P51X, ,0, ,0,ALL, , , , , ,  
+FLST,2,1,3,ORDE,1   
+FITEM,2,8   
+!*  
+/GO 
+FK,P51X,FY,-100 
+FLST,2,1,3,ORDE,1   
+FITEM,2,18  
+!*  
+/GO 
+FK,P51X,FY,-100 
+FINISH  
+/SOL
+/STATUS,SOLU
+SOLVE   
+FINISH  
+/POST1  
+PLDISP,1
+FINISH  
+! /EXIT,ALL 
+/COM,ANSYS RELEASE 12.1    UP20091102       19:52:30    10/23/2016  
+/input,menust,tmp,'',,,,,,,,,,,,,,,,1   
+/GRA,POWER  
+/GST,ON 
+/PLO,INFO,3 
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+RESUME,'complex_beam','db','.'  
+/COM,ANSYS RELEASE 12.1    UP20091102       20:04:04    10/23/2016
+/COM,ANSYS RELEASE 12.1    UP20091102       19:52:35    10/23/2016  
+/POST1  
+PLDISP,1
+FINISH  
+! /EXIT,NOSAV   
+/VIEW,1,,1  
+/ANG,1  
+/REP,FAST   
+/VIEW,1,1   
+/ANG,1  
+/REP,FAST   
+/VIEW,1,,,1 
+/ANG,1  
+/REP,FAST   
+/POST1  
+PLDISP,1
+/REPLOT,RESIZE  
+/REPLOT,RESIZE  
+/VIEW,1,1,1,1   
+/ANG,1  
+/REP,FAST   
+/DIST,1,0.924021086472,1
+/REP,FAST   
+/DIST,1,0.924021086472,1
+/REP,FAST   
+/DIST,1,1.08222638492,1 
+/REP,FAST   
+/DIST,1,1.08222638492,1 
+/REP,FAST   
+/DIST,1,1.08222638492,1 
+/REP,FAST   
+/DIST,1,1.08222638492,1 
+/REP,FAST   
+/DIST,1,1.08222638492,1 
+/REP,FAST   
+/DIST,1,1.08222638492,1 
+/REP,FAST   
+/DIST,1,1.08222638492,1 
+/REP,FAST   
+/VIEW,  1, -0.774817136222    , -0.566608235515    ,  0.280381013735
+/ANG,   1,   81.9635430920  
+/REPLO  
+/DIST,1,0.924021086472,1
+/REP,FAST   
+/DIST,1,0.924021086472,1
+/REP,FAST   
+/DIST,1,0.924021086472,1
+/REP,FAST   
+!*  
+/PSF,DEFA, ,1,0,1   
+/PBF,DEFA, ,1   
+/PIC,DEFA, ,1   
+/PSYMB,CS,0 
+/PSYMB,NDIR,0   
+/PSYMB,ESYS,0   
+/PSYMB,LDIV,0   
+/PSYMB,LDIR,0   
+/PSYMB,ADIR,0   
+/PSYMB,ECON,0   
+/PSYMB,XNODE,0  
+/PSYMB,DOT,1
+/PSYMB,PCONV,   
+/PSYMB,LAYR,0   
+/PSYMB,FBCS,0   
+!*  
+/PBC,ALL,,1 
+/PBC,NFOR,,0
+/PBC,NMOM,,0
+/PBC,RFOR,,0
+/PBC,RMOM,,0
+/PBC,PATH,,0
+/REP
+!*  
+/REPLOT,RESIZE  
+/REPLOT,RESIZE  
+/VIEW,1,,-1 
+/ANG,1  
+/REP,FAST   
+/VIEW,1,-1  
+/ANG,1  
+/REP,FAST   
+/VIEW,1,,,-1
+/ANG,1  
+/REP,FAST   
+/REPLOT,RESIZE  
+/REPLOT,RESIZE  
+FINISH  
+! /EXIT,ALL 

@@ -1,0 +1,37 @@
+
+ ===========================
+ = multifrontal statistics =
+ ===========================
+
+     number of equations                     =             300
+     no. of nonzeroes in lower triangle of a =             492
+     number of compressed nodes              =              50
+     no. of compressed nonzeroes in l. tri.  =              49
+     amount of workspace currently in use    =            7156
+     max. amt. of workspace used             =         1999996
+     no. of nonzeroes in the factor l        =            3378.
+     number of super nodes                   =              25
+     number of compressed subscripts         =             144
+     size of stack storage                   =             195
+     maximum order of a front matrix         =              18
+     maximum size of a front matrix          =             171
+     maximum size of a front trapezoid       =             138
+     no. of floating point ops for factor    =      5.1806D+04
+     no. of floating point ops for solve     =      1.5012D+04
+     actual no. of nonzeroes in the factor l =            3378.
+     actual number of compressed subscripts  =             144
+     actual size of stack storage used       =             642
+     negative pivot monitoring activated
+     number of negative pivots encountered   =              0.
+     factorization panel size                =              12
+     factorization update panel size         =              12
+     solution block size                     =               2
+     time (cpu & wall) for structure input   =        0.000000        0.000200
+     time (cpu & wall) for ordering          =        0.000000        0.000018
+     time (cpu & wall) for symbolic factor   =        0.000000        0.000012
+     time (cpu & wall) for value input       =        0.000000        0.000088
+     time (cpu & wall) for numeric factor    =        0.015600        0.008150
+     computational rate (mflops) for factor  =        3.320854        6.356862
+     condition number estimate               =      0.0000D+00
+
+     no input or output performed

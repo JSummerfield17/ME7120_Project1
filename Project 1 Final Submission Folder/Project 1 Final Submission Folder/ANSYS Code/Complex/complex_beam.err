@@ -1,0 +1,86 @@
+/COM,ANSYS RELEASE 12.1    UP20091102       19:45:11    10/23/2016
+
+ *** WARNING ***                         CP =       3.401   TIME= 19:50:30
+ No pretension sections are available for loading.                       
+
+ *** WARNING ***                         CP =       3.916   TIME= 19:50:51
+ Zero thickness element 1 may result in wrong thermal or bending stress. 
+  Check real constant table 1.                                           
+/COM,ANSYS RELEASE 12.1    UP20091102       19:52:29    10/23/2016
+/COM,ANSYS RELEASE 12.1    UP20091102       19:53:43    10/23/2016
+/COM,ANSYS RELEASE 12.1    UP20091102       20:00:22    10/23/2016
+
+ *** WARNING ***                         CP =       1.232   TIME= 20:00:55
+ The /BATCH command must be the first line of input.  The /BATCH command 
+ is ignored.                                                             
+
+ *** WARNING ***                         CP =       1.264   TIME= 20:00:55
+ User Interface mode is already on.  Command ignored.                    
+
+ *** WARNING ***                         CP =       1.685   TIME= 20:00:56
+ Zero thickness element 1 may result in wrong thermal or bending stress. 
+  Check real constant table 1.                                           
+
+ *** WARNING ***                         CP =       1.919   TIME= 20:00:58
+ The /BATCH command must be the first line of input.  The /BATCH command 
+ is ignored.                                                             
+
+ *** WARNING ***                         CP =       1.966   TIME= 20:00:58
+ User Interface mode is already on.  Command ignored.                    
+/COM,ANSYS RELEASE 12.1    UP20091102       20:01:52    10/23/2016
+
+ *** WARNING ***                         CP =       1.108   TIME= 20:01:55
+ The /BATCH command must be the first line of input.  The /BATCH command 
+ is ignored.                                                             
+
+ *** WARNING ***                         CP =       1.123   TIME= 20:01:55
+ User Interface mode is already on.  Command ignored.                    
+
+ *** WARNING ***                         CP =       1.638   TIME= 20:01:56
+ Zero thickness element 1 may result in wrong thermal or bending stress. 
+  Check real constant table 1.                                           
+
+ *** WARNING ***                         CP =       1.966   TIME= 20:02:00
+ The /BATCH command must be the first line of input.  The /BATCH command 
+ is ignored.                                                             
+
+ *** WARNING ***                         CP =       2.044   TIME= 20:02:00
+ User Interface mode is already on.  Command ignored.                    
+/COM,ANSYS RELEASE 12.1    UP20091102       20:03:03    10/23/2016
+
+ *** WARNING ***                         CP =       1.139   TIME= 20:03:06
+ The /BATCH command must be the first line of input.  The /BATCH command 
+ is ignored.                                                             
+
+ *** WARNING ***                         CP =       1.154   TIME= 20:03:06
+ User Interface mode is already on.  Command ignored.                    
+
+ *** WARNING ***                         CP =       1.685   TIME= 20:03:07
+ Zero thickness element 1 may result in wrong thermal or bending stress. 
+  Check real constant table 1.                                           
+
+ *** WARNING ***                         CP =       2.200   TIME= 20:03:11
+ The /BATCH command must be the first line of input.  The /BATCH command 
+ is ignored.                                                             
+
+ *** WARNING ***                         CP =       2.231   TIME= 20:03:11
+ User Interface mode is already on.  Command ignored.                    
+/COM,ANSYS RELEASE 12.1    UP20091102       20:03:56    10/23/2016
+
+ *** WARNING ***                         CP =       1.232   TIME= 20:04:02
+ The /BATCH command must be the first line of input.  The /BATCH command 
+ is ignored.                                                             
+
+ *** WARNING ***                         CP =       1.248   TIME= 20:04:02
+ User Interface mode is already on.  Command ignored.                    
+
+ *** WARNING ***                         CP =       1.981   TIME= 20:04:03
+ Zero thickness element 1 may result in wrong thermal or bending stress. 
+  Check real constant table 1.                                           
+
+ *** WARNING ***                         CP =       2.746   TIME= 20:04:04
+ The /BATCH command must be the first line of input.  The /BATCH command 
+ is ignored.                                                             
+
+ *** WARNING ***                         CP =       2.777   TIME= 20:04:04
+ User Interface mode is already on.  Command ignored.                    

@@ -1,0 +1,9 @@
+/COM,ANSYS RELEASE 12.1    UP20091102       16:53:45    10/23/2016
+
+ *** ERROR ***                           CP =       2.278   TIME= 17:03:29
+ This function requires selected lines.                                  
+  No lines are currently selected.                                       
+
+ *** WARNING ***                         CP =       3.853   TIME= 17:05:27
+ Zero thickness element 1 may result in wrong thermal or bending stress. 
+  Check real constant table 1.                                           
